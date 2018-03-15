@@ -1,44 +1,35 @@
 
 public class Card {
 	
-	private static String rank;
-	private static String suit;
-	private static int pointValue;
+	private String rank;
+	private String suit;
+	private int pointValue;
 	
 	public Card(String rank, String suit, int pointValue){
-		this.setRank(rank);
-		this.setSuit(suit);
-		this.setPointValue(pointValue);
+		this.rank = rank;
+		this.suit = suit;
+		this.pointValue = pointValue;
 	}
-	public static void main(String args[]) {
-		Card obj = new Card(rank, suit, pointValue);
-	}
-	
+
 	public boolean equals(Card otherCard) {
-		
+		if(pointValue == otherCard.getPointValue()) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 	public String toString() {
-	
+		return(rank + "of" + suit + "with value of" + pointValue);
 	}
+	
 	public int getPointValue() {
 		return pointValue;
-	}
-	public void setPointValue(int pointValue) {
-		this.pointValue = pointValue;
 	}
 	public String getSuit() {
 		return suit;
 	}
-	public void setSuit(String suit) {
-		this.suit = suit;
-	}
 	public String getRank() {
 		return rank;
 	}
-	public void setRank(String rank) {
-		this.rank = rank;
-	}
-	
-	
 }
